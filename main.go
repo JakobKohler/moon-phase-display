@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 
 	"github.com/JakobKohler/moon-phase-display/api"
@@ -15,7 +16,6 @@ func main() {
 		log.Fatalln(err)
 	}
 
-	log.Println(moonPhase)
 	outString := util.BuildPrettyMoonPhaseString(moonPhase)
-	log.Println(outString)
+	fmt.Printf(outString)
 }
