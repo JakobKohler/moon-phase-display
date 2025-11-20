@@ -4,6 +4,7 @@ import (
 	"log"
 
 	"github.com/JakobKohler/moon-phase-display/api"
+	"github.com/JakobKohler/moon-phase-display/util"
 )
 
 func main() {
@@ -15,4 +16,6 @@ func main() {
 	}
 
 	log.Println(moonPhase)
+	outString := util.BuildPrettyMoonPhaseString(moonPhase)
+	log.Println(outString)
 }
