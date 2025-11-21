@@ -1,22 +1,23 @@
-# moon-phase-display
+# Moon Phase Display
 A little go program to print out the current moon phase as a visually appealing string to be used in bars like polybar. Will be expanded in the future
 
 ## Usage
-General:
-```bash
-moon-phase-display <mode> [latitude] [longitude]
-```
-Valid modes are: `moon`
-latitude and longitude are optional and also useless for now
 
-Building the project:
-```bash
+#### Building the project:
+
+```sh
 # build the binary and put it in a desired directory
 go build -o /usr/local/bin/moon-phase-display
 ```
+#### General usage:
+```bash
+moon-phase-display <mode> [latitude] [longitude]
+```
+Valid modes are: `moon` <br>
+latitude and longitude are optional and also useless for now
 
-Polybar module:
-```toml
+#### Polybar module:
+```INI
 [module/moonphase]
 type = custom/script
 exec = moon-phase-display moon
