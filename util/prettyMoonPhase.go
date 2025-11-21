@@ -4,6 +4,7 @@ func BuildPrettyMoonPhaseString(moonPhase float64) string {
 	moonPhaseUtil := NewMoonPhase()
 
 	currentPhaseIcon := moonPhaseUtil.GetIcon(moonPhase)
+	moonPhaseUtil.GetIcon(moonPhase)
 
 	return currentPhaseIcon
 }
