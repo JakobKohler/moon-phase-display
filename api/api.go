@@ -34,18 +34,18 @@ func fetchBodyPositions(apiBase string, lat string, lon string) (model.BodyPosit
 	data, err := http.Get(url)
 
 	if err != nil {
-		log.Fatal(err)
+		return model.BodyPositionResponse{}, err
 	}
 
 	body, err := io.ReadAll(data.Body)
 	if err != nil {
-		log.Fatal(err)
+		return model.BodyPositionResponse{}, err
 	}
 
 	var res model.BodyPositionResponse
 
 	if err := json.Unmarshal(body, &res); err != nil {
-		log.Fatal(err)
+		return model.BodyPositionResponse{}, err
 	}
 
 	return res, nil

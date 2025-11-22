@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"log"
 	"os"
 
 	"github.com/JakobKohler/moon-phase-display/api"
@@ -52,7 +51,7 @@ func main() {
 	}
 
 	if err != nil {
-		log.Fatalln(err)
+		outString = ""
 	}
 
 	fmt.Printf(outString)
